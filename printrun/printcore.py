@@ -205,6 +205,11 @@ class printcore():
             self.read_thread.start()
             self._start_sender()
 
+	  self.printer.setDTR(0)
+          time.sleep(0.1)
+          self.printer.setDTR(1)
+
+
     def reset(self):
         """Reset the printer
         """
